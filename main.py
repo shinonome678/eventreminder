@@ -56,7 +56,7 @@ async def schedule_event_notification(event):
         color=discord.Color.orange()
     )
     try:
-        await channel.send(content="@everyone", embed=embed)
+        await channel.send(embed=embed)
         print(f"イベント開始の自動通知を送信しました: {event.name}")
     except discord.Forbidden:
         print(f"エラー: チャンネル({channel.name})へのメッセージ送信権限がありません。")
